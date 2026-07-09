@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { getDatabaseSummary } from '../../services/databaseService'
 import { exportLogs, getLogSummary } from '../../services/logService'
 import { getStorageDiagnostics } from '../../services/localStorageService'
+import { getCurrentVersion } from '../../services/updateService'
 
 export function DeveloperSection() {
   const [status, setStatus] = useState(getDatabaseSummary())
@@ -28,7 +29,7 @@ export function DeveloperSection() {
           <Chip icon={<HardDrive size={16} />} label={`Storage: ${storage.mode}`} color="primary" variant="outlined" />
           <Chip icon={<Bug size={16} />} label={`Logs: ${logs.count}`} color="default" variant="outlined" />
         </Box>
-        <Typography variant="body2" color="text.secondary">Version: 0.0.1</Typography>
+        <Typography variant="body2" color="text.secondary">Version: {getCurrentVersion()}</Typography>
         <Typography variant="body2" color="text.secondary">Database status: {status.status}</Typography>
         <Typography variant="body2" color="text.secondary">Storage status: {storage.mode}</Typography>
         <Typography variant="body2" color="text.secondary">Latest log: {logs.latest}</Typography>

@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import { AppRouter } from './app/AppRouter'
+import { UpdateProvider } from './app/providers/UpdateProvider'
 import './App.css'
 import { localStorageService } from './services/localStorageService'
 import type { AppSettings } from './types/domain'
@@ -75,9 +76,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter>
-        <AppRouter />
-      </BrowserRouter>
+      <UpdateProvider>
+        <BrowserRouter>
+          <AppRouter />
+        </BrowserRouter>
+      </UpdateProvider>
     </ThemeProvider>
   )
 }

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "notes": "Describe what changed in this release.",
+  "pub_date": "2026-01-01T00:00:00Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "PASTE_SIGNATURE_FROM_.sig_FILE",
+      "url": "https://github.com/josetedesco/pollitomaster/releases/download/v0.0.1/Pollito-Master_0.0.1_x64-setup.exe"
+    }
+  }
+}

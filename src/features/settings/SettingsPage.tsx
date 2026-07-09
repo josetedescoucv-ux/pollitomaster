@@ -4,6 +4,7 @@ import { LogOut, Sparkles } from 'lucide-react'
 import { useAuth } from '../../app/providers/AuthProvider'
 import { SectionCard } from '../../components/ui/SectionCard'
 import { DeveloperSection } from './DeveloperSection'
+import { UpdatesSection } from './UpdatesSection'
 import { localStorageService } from '../../services/localStorageService'
 import { getText } from '../../shared/i18n'
 import type { AppSettings } from '../../types/domain'
@@ -114,6 +115,8 @@ export function SettingsPage() {
           </FormControl>
         </Stack>
       </SectionCard>
+
+      <UpdatesSection />
 
       <SectionCard title={getText('data', settings.language)} description="Export your personal workspace data for backup.">
         <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
