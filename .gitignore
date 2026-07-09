@@ -1,47 +1,65 @@
-# Logs
-logs
-*.log
+# =========================
+# Node / Frontend
+# =========================
+
+node_modules/
+dist/
+dist-ssr/
+
+*.local
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
 
-# Editor directories and files
-.vscode/*
+# =========================
+# Tauri builds
+# =========================
+
+src-tauri/target/
+target/
+
+
+# =========================
+# Tauri updater signing
+# NEVER commit private keys
+# =========================
+
+*.key
+*.key.pub
+.env.signing
+
+
+# =========================
+# Environment files
+# =========================
+
+.env
+.env.*
+
+
+# =========================
+# Editor files
+# =========================
+
+.vscode/
 !.vscode/extensions.json
-.idea
-.DS_Store
+
+.idea/
+
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# Tauri updater signing — never commit private keys
-*.key
-.env.signing
 
-# Node
-node_modules/
-dist/
+# =========================
+# OS generated files
+# =========================
 
-# Tauri builds
-src-tauri/target/
-
-# Environment files
-.env
-.env.*
-
-# IDE
-.vscode/
-.idea/
-
-# OS files
 .DS_Store
 Thumbs.db
