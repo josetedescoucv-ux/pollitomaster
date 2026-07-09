@@ -26,3 +26,22 @@ dist-ssr
 # Tauri updater signing — never commit private keys
 *.key
 .env.signing
+
+# Node
+node_modules/
+dist/
+
+# Tauri builds
+src-tauri/target/
+
+# Environment files
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
